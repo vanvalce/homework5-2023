@@ -93,7 +93,7 @@ body > header{
     top: 0;
     width: 100%;
 }
-    
+}
 
 @media screen and (prefers-reduced-motion:reduce) {
     #logo{
@@ -110,20 +110,18 @@ body > header{
         grid-row: 1/2;
     }
     .nav_links{
-        display: flex;
-        flex-basis: 100%;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        grid-row: 1 / span 2;
-    }
-
-    h4 > li{
-        content: "👍";
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: (1/2)fr;
+        justify-content: center;
+        align-content: center;
     }
 
     .pricing{
-        grid-template-columns: 3;
-        align-items: flex-end;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        max-width: 33%;
+        align-items: end;
     }
 
     .card{
@@ -131,8 +129,12 @@ body > header{
         flex-basis: 325px;
     }
 
+    .card ul li:nth-child(2)::after{
+        content: "👍";
+        font-size: 16px;
+    }
+
     .gallery{
         display: none;
     }
-}
 }
