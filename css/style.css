@@ -3,19 +3,16 @@
     from {width: 25px; opacity: 0;}
     to {width: 475px; opacity: 1;}
 }
-
 /*Select the logo id and make it take 5 seconds*/
 #logo{
     animation-name: logo;
     animation-duration: 5s;
 }
-
 /*Set fonts to Poppins//serif and background image with backup color*/
 body{
     font-family: "Poppins", serif;
     background: #f1f1f1 url("/images/concrete_seamless.png");
 }
-
 /*Use flex to format all instances of the header tag in the center*/
 header{
     display: flex;
@@ -23,7 +20,6 @@ header{
     justify-content: center;
     align-items: center;
 }
-
 /*Use flex to format the nav_links class to be a left-aligned column in the center*/
 .nav_links{
     display: flex;
@@ -31,12 +27,10 @@ header{
     justify-content: center;
     align-items: left;
 }
-
 /*Ensure the navigation links remain blue after visiting*/
 .nav_links a:visited{
     color: blue;
 }
-
 /*Set background color and border specs for direct children of a card class*/
 .card > header{
     background-color: #288088;
@@ -44,7 +38,6 @@ header{
     padding: 20px 150px;
     border-radius: 50px 50px 0 0;
 }
-
 /*Set the initial size for the card class to match-- same width in mobile view*/
 .card{
     display: flex;
@@ -54,7 +47,6 @@ header{
     align-items: center;
     border-radius: 50px 50px 0 0;
 }
-
 /*Center the pricing class on both axes*/
 .pricing{
     display: flex;
@@ -62,24 +54,20 @@ header{
     justify-content: center;
     align-items: center;
 }
-
 /*Set the border and width of the gallery images*/
 .gallery img{
     border: solid 10px #50C7C7;
     margin: 10px;
     width: 300px;
 }
-
 /*Format the gallery class with flex to adjust as screen size changes*/
 .gallery{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
-
 /*Set specs for when screen is larger than 900px*/
 @media screen and (min-width: 900px) {
-
     /*Move the logo and nav links to opposite ends of the same row*/
     header{
         display: flex;
@@ -88,7 +76,6 @@ header{
         justify-content: space-between;
         align-items: center;
     }
-
     /*Specify the location of the navigation links*/
     .nav_links{
         display: flex;
@@ -96,13 +83,11 @@ header{
         justify-content: right;
         align-items: center;
     }
-
     /*Adjust the sizes of pricing and card classes to have the same width*/
     .pricing, .card{
         display: flex;
         flex-basis: 275px;
     }
-
     /*Make sure the header stays put at the top of the screen as the user scrolls down*/    
     body > header{
         position: fixed;
@@ -110,7 +95,6 @@ header{
         width: 100%;
     }
 }
-
 /*Set specs in case user selects reduced motion*/
 @media screen and (prefers-reduced-motion:reduce) {
     
@@ -119,7 +103,6 @@ header{
         animation: none;
     }
 }
-
 /*Set specs for the print preview*/
 @media print{
     
@@ -130,40 +113,14 @@ header{
     }
     
     /*Move the nav links to be spread and centered below the logo*/
-    header{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        align-content: space-between;
-    }
-    
-    #logo{
-        grid-column: 1/-1;
-    }
-    
     nav{
-        grid-column: 1/-1;
-    }
-    
-    .nav_links{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .pricing{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-        
-   /* nav{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-       max-width: 100%;
+        max-width: 100%;
     }
-    
+
     .nav_links{
         display: flex;
         flex-direction: row;
@@ -171,13 +128,16 @@ header{
         align-items: center;
         max-width: 100%
     }
-*/
+
     /*Align the pricing class elements along the bottom*/
-   /* .pricing{
+    .pricing{
+        display: inline-grid;
+        grid-template-colums: repeat(auto-fit, minmax(325px, 1fr));
+        max-width: 100%;
         flex-basis: 325px;
         max-width: 100%
-    }*/
-    
+    }
+
     /*Add borders and set sizes for elements of the card class*/
     .card{
         border: solid 2px #45ADDD;
@@ -189,7 +149,6 @@ header{
     #gallery, .gallery{
         display: none;
     }
-
     /*Add a thumbs up in each card class to match the reference photo*/
     .card ul li:nth-child(2)::after{
         content: "👍";
