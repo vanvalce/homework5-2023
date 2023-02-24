@@ -130,12 +130,38 @@ header{
     }
     
     /*Move the nav links to be spread and centered below the logo*/
+    header{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        align-content: space-between;
+    }
+    
+    #logo{
+        grid-column: 1/-1;
+    }
+    
     nav{
+        grid-column: 1/-1;
+    }
+    
+    .nav_links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .pricing{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+        
+   /* nav{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        max-width: 100%;
+       max-width: 100%;
     }
     
     .nav_links{
@@ -145,12 +171,12 @@ header{
         align-items: center;
         max-width: 100%
     }
-
+*/
     /*Align the pricing class elements along the bottom*/
-    .pricing{
+   /* .pricing{
         flex-basis: 325px;
         max-width: 100%
-    }
+    }*/
     
     /*Add borders and set sizes for elements of the card class*/
     .card{
