@@ -134,19 +134,18 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
     }
     
     .nav_links{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-right: 20px;
-        flex-basis: 60%;
+        max-width: 100%
     }
 
     /*Align the pricing class elements along the bottom*/
-    .pricing{
+    .pricing, .card > header{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
         align-items: end;
@@ -158,8 +157,8 @@ header{
         flex-basis: 325px;
     }
     
-        /*Remove the gallery images from view*/
-    #gallery{
+        /*Remove the gallery header and images from view*/
+    #gallery, .gallery{
         display: none;
     }
 
