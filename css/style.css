@@ -134,6 +134,12 @@ header{
         width: 100%;
     }
     
+    .nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .nav_links{
         display: flex;
         justify-content: center;
@@ -153,6 +159,12 @@ header{
     .card{
         border: solid 2px #45ADDD;
         flex-basis: 325px;
+    }
+    
+    .card-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     
         /*Remove the gallery images from view*/
