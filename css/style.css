@@ -132,6 +132,7 @@ header{
     /*Move the nav links to be spread and centered below the logo*/
     nav{
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         max-width: 100%;
@@ -145,16 +146,17 @@ header{
     }
 
     /*Align the pricing class elements along the bottom*/
-    .pricing, .card > header{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-        align-items: end;
+    .pricing{
+        display: inline-grid;
+        grid-template-colums: repeat(auto-fit, minmax(325px, 1fr));
+        max-width: 100%;
     }
     
     /*Add borders and set sizes for elements of the card class*/
     .card{
         border: solid 2px #45ADDD;
         flex-basis: 325px;
+        max-width: 100%
     }
     
         /*Remove the gallery header and images from view*/
