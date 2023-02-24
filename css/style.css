@@ -94,7 +94,12 @@ header{
         top: 0;
         width: 100%;
     }
-}
+    
+    /* Don't let the header cover the top of the rest of the content*/
+    main{
+        margin-top: 10px;
+    }
+    
 /*Set specs in case user selects reduced motion*/
 @media screen and (prefers-reduced-motion:reduce) {
     
@@ -113,7 +118,21 @@ header{
     }
     
     /*Move the nav links to be spread and centered below the logo*/
+    
     nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .nav_links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+       
+    /*nav{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -127,7 +146,7 @@ header{
         justify-content: space-between;
         align-items: center;
         max-width: 100%
-    }
+    }/*
 
     /*Align the pricing class elements along the bottom*/
     .pricing{
