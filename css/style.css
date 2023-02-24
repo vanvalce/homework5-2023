@@ -140,6 +140,7 @@ header{
     
     .nav_links{
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         max-width: 100%
@@ -147,9 +148,8 @@ header{
 
     /*Align the pricing class elements along the bottom*/
     .pricing{
-        display: inline-grid;
-        grid-template-colums: repeat(auto-fit, minmax(325px, 1fr));
-        max-width: 100%;
+        flex-basis: 325px;
+        max-width: 100%
     }
     
     /*Add borders and set sizes for elements of the card class*/
