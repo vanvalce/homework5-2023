@@ -130,41 +130,33 @@ header{
     }
     
     /*Move the nav links to be spread and centered below the logo*/
-    .header{
-        width: 100%;
-    }
-    
-    .nav{
+    nav{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
     
     .nav_links{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        margin-right: 20px;
+        flex-basis: 60%;
     }
 
     /*Align the pricing class elements along the bottom*/
     .pricing{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: end;
+        max-width: 33%
     }
     
     /*Add borders and set sizes for elements of the card class*/
     .card{
         border: solid 2px #45ADDD;
         flex-basis: 325px;
-    }
-    
-    .card-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
     }
     
         /*Remove the gallery images from view*/
