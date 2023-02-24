@@ -121,24 +121,27 @@ header{
     
     nav{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* using auto-fit to fit elements in the available space */
+        justify-content: space-between;
         align-items: center;
+        max-width: 100%;
     }
     
     .nav_links{
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        max-width: 100%
     }
-       
-
 
     /*Align the pricing class elements along the bottom*/
     .pricing{
-        display: inline-grid;
-        grid-template-colums: repeat(auto-fit, minmax(325px, 1fr));
-        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 10px; /* add some gap between the cards */
         flex-basis: 325px;
         max-width: 100%
     }
