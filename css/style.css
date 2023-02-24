@@ -148,9 +148,8 @@ header{
     /*Align the pricing class elements along the bottom*/
     .pricing{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
         align-items: end;
-        max-width: 33%
     }
     
     /*Add borders and set sizes for elements of the card class*/
@@ -160,7 +159,7 @@ header{
     }
     
         /*Remove the gallery images from view*/
-    .gallery{
+    #gallery{
         display: none;
     }
 
