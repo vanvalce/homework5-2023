@@ -132,21 +132,7 @@ header{
         align-items: center;
     }
        
-    /*nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 100%;
-    }
 
-    .nav_links{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 100%
-    }/*
 
     /*Align the pricing class elements along the bottom*/
     .pricing{
